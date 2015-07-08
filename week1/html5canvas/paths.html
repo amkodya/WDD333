@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Our First Canvas</title>
+		<style type="text/css">
+			#Canvas1{
+
+				border: solid 1px black;
+
+			}
+
+		</style>
+
+		<script>
+
+			window.onload = function(){
+
+				var theCanvas = document.getElementById("Canvas1");
+
+				if(theCanvas && theCanvas.getContext){
+					//Get Context
+					var ctx = theCanvas.getContext("2d");
+
+					if(ctx){
+						ctx.strokeStyle = "blue";
+						ctx.fillStyle = "red";
+						ctx.lineWidth = 5;
+
+						//draw an open path
+						ctx.beginPath();
+						ctx.moveTo(25,175);
+						ctx.lineTo(50,25);
+						ctx.lineTo(125,50);
+						ctx.lineTo(175,175);
+						//ctx.closePath();
+						ctx.fill();
+						ctx.stroke();
+					
+
+				}
+			}
+		}
+
+		</script>
+	</head>
+	<body>
+		<h1>Saving and Restoring the Canvas State</h1>
+		<p>This example shows how to manage the canvas state using save() and restore()</p>
+
+
+		<canvas id="Canvas1" width="500" height="300">
+			<!--FallBack Content-->
+			Your browser does not support Canvas
+		</canvas>
+
+
+	</body>
+</html>
