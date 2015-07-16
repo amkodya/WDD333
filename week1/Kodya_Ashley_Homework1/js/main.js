@@ -16,14 +16,33 @@ HTML5 Shape Drawing Activity
 window.onload = function() {
 
 
-/*******************************************
-FILE SETUP
+// *******************************************
+//FILE SETUP
 
 // Setup up 7 different Canvases in index.html one for each problem.
 // Link Modernizr.js
 // Link the main.js file
 // Setup the call to that canvas and get it's 2d context
 // Use Modernizr to verify that your browser supports canvas, include a fallback message
+
+
+if(Modernizr.canvas){
+	
+	var theCanvas = document.getElementById("Canvas1");
+	var ctx = theCanvas.getContext("2d");
+	
+	ctx.font = "24pt Helvetica";
+	alert("Canvas is supported!", 20, 60);
+	
+	
+	} else {
+
+	ctx.font = "24pt Helvetica";
+	alert("Canvas is Not supported!", 20, 60);
+		console.log(Modernizr);
+		
+		};
+
 
 
 /*******************************************
