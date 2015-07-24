@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">	
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/sky.css" id="theme">	
+
+	<style>
+
+	div#htmlshow {
+		width: 1000px;
+		height: 400px;
+		overflow: scroll;
+	} 
+	img#tooltip {
+		width: 480px;
+		height: 150px;
+		border: none;
+	}
+	h1 {
+		font-size: 20px;
+	}
+
+	</style>
+
+</head>
+<body>
+	<div class="reveal"> <!-- wrap entire presentation in div -->
+
+		<div class="slides"> <!-- single slides are each in a div -->
+
+			<section data-transition="slide-in fade-out">
+				<h1>Tooltipster</h1>
+				<p>by Ashley Kodya</p>		
+			</section>
+			<section>
+				<section data-transition="slide-in fade-out">
+					<h2>What is Tooltipster?</h2>
+					<p>a jQuery plugin that helps designers quickly create professional Tooltips</p>
+					<img id="tooltip" src="images/tooltip.png">	
+				</section>
+				<section data-transition="slide-in fade-out">
+					<h2>Tooltipster API</h2>
+					<p>Created to be flexible, allows you to create and customize easily, as well as override certain default functions if necessary. Also allows you to easily update content contained within the tooltip and easy to relocate code within your document.</p>		
+				</section>
+				<section data-transition="slide-in fade-out">
+					<h2>Dynamic Content</h2>
+					<p>Tooltipster allows you to create custom tooltips using AJAX data that is cached for when tooltip appears.<br>
+						i.e. the last song listened to on Spotify</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Tooltipster Options</h1>
+					<p>This plugin offers many options you'd add into JQuery code<br>
+						You add customized options within the JQuery code</p>
+					</p>
+				</section>
+				<section>
+					<h2>Animation</h2>
+					<p>The designer is able to set how the tooltipster appears onto the page.<br>
+						You can choose animations such as: fade, grow, swing, slide or fall</p>
+				</section>
+				<section>
+					<h2>Content</h2>
+					<p>Sets the content within the tooltip.<br>
+						This can be a string, JQuery content or by using html code contained within a string</p>
+				</section>
+				<section>
+					<h2>Position</h2>
+					<p>Sets where the tooltip is positioned in relation to the item<br>
+						The position can be set to:<br>
+						right, left, top, top-right/left, bottom-right/left<br>
+						Position can be tweaked by offsetX/offsetY tag
+					</p>
+				</section>
+				<section>
+					<h2>Themes</h2>
+					<p>There are a few themes to choose from for tooltips<br>
+						The themes are:<br>
+						Default, Light, Punk, Noir, Shadow<br>
+						You change the theme by using the tag iconTheme: "tooltipster-default"; <br>
+						The user also has the ability to create there own themes and load them onto the tooltip<br>
+				</section>
+				<section>
+					<h4>Boolean Value Options:</h4><br>
+						<p>
+							<small>arrow - gives your tooltip an arrow that creates a speech bubble effect<br>
+							autoClose - decides whether tooltip automatically closes or not<br>
+							debug - helps you resolve errors within tooltip coding<br>
+							contentAsHTML - allows your content value to be set as either string <br>or interpreted as html code<br>
+							hideOnClick - decides whether your tooltip closes when you click or auto closes<br>
+							positionTracker - if the item with the tooltip moves, then the tooltip moves<br>
+							interactive - allows user to interact with tooltip<br>
+							multiple - allows you setup multiple tooltips on one item<br>
+							onlyOne - sets the tooltip to be the only one open at a time<br>
+							touchDevices - disables tooltips for touch devices<br>
+							updateAnimation - animates tooltip when content has been updated
+							</small>
+						</p>
+				</section>
+				<section>
+					<h4>Integer Value Options</h4>
+						<p>
+							<small>delay - stops the tooltip from animating by the amount of time in milliseconds<br>
+								minWidth/maxWidth - sets min/max width of tooltip<br>
+								interactiveTolerance - sets amount of time user has to hover over item before tooltip appears<br>
+								offsetX/offsetY - sets distance from default origin of tooltip in pixels<br>
+								speed - sets speed of the tooltip's animation<br>
+								timer - sets how long the tooltip will show<br>
+
+							</small>
+						</p>
+				</section>
+				<section>
+					<h4>Function Options</h4>
+						<p>
+							<small>
+								functionInit - loads function once tooltip loads and if returns value, the value becomes the toooltip<br>
+								functionBefore - function loads before tooltip opens and affects if and how the tooltip loads<br>
+								functionReady - loads function when tooltip and it's content are added to the DOM<br>
+								functionAfter - oads function after tooltip is closed and removed from DOM<br>
+
+							</small>
+						</p>
+
+
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Example code</h1>
+					<div id="htmlshow"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;tooltipster-master/css/tooltipster.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style.css&quot; /&gt;
+    &lt;link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'&gt;
+    &lt;link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic' rel='stylesheet' type='text/css'&gt;
+
+    &lt;script type=&quot;text/javascript&quot; src=&quot;http://code.jquery.com/jquery-1.7.0.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;tooltipster-master/js/jquery.tooltipster.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- activates tooltipster  1 --&gt;
+     &lt;script&gt;
+
+     /*   $(document).ready(function() {
+            $('.tooltip').tooltipster();
+
+       });
+
+      */
+    
+
+    // ----------------------------------------------------------------------
+
+    // add image and text to tooltip by using JQuery objects  2
+
+    /*    $(document).ready(function() {
+            $('.tooltip').tooltipster({
+                content: $('&lt;span&gt;&lt;img src=&quot;images/dog.png&quot; /&gt; &lt;strong&gt;OMG, I'm a Tooltip&lt;/strong&gt;&lt;/span&gt;'),
+                theme: &quot;tooltipster-noir&quot;
+            });
+        }); 
+	*/     
+
+    // ----------------------------------------------------------------------
+
+
+    // images with link and options 3
+
+     $(document).ready(function() {
+            $('.tooltip').tooltipster({
+            content: $('&lt;span&gt;&lt;img src=&quot;images/dog.png&quot; /&gt;&lt;a href=&quot;pitbulls.org&quot;&gt;Setup links in tooltips&lt;/a&gt;&lt;/span&gt;'),
+            animation: 'grow',
+   			delay: 200,
+   			theme: 'tooltipster-shadow',
+   			touchDevices: false,
+   			autoClose: true,
+   			trigger: 'hover',
+   			interactive: true,
+   			speed: 1000,
+   			position: &quot;bottom-right&quot;
+
+            });
+
+
+        }); 
+
+	// ----------------------------------------------------------------------
+
+	//creating multiple tool tips on one item
+
+	/* $(document).ready(function() {
+
+		var tooltipsterObjects = $('.tooltip').tooltipster({
+			content: 'Oh, here's another toolip',
+			multiple: true,
+			position: 'top-left',
+			animation: &quot;fall&quot;,
+			speed: 200,
+
+		});
+
+		var tooltip1 = tooltipsterObjects[0];
+			tooltip1.content('first tool tip').show();
+
+		var tooltipsterObjects = $('.tooltip').tooltipster({
+			// don't forget to provide content here as the 1st tooltip will have deleted the original title attribute of the element
+			content: '...and ...another ...tooltip',
+			multiple: true,
+			position: 'bottom-right',
+			animation: &quot;fall&quot;,
+			speed: 2000,
+		});
+
+		// since the jQuery selector matches only one element, the array will contain only one Tooltipster object.
+		// Otherwise the array would contain one object for each matched element, in the same order as them
+		var tooltip2 = tooltipsterObjects[0];
+
+		// use this Tooltipster object to make any API method call on the tooltip
+		tooltip2.content('...and another').show();
+		// all documented methods can be called that way
+		var element = tooltip2.elementTooltip();
+
+		// calling the API methods in the usual way only affects the first tooltip that was created on the element
+		$('.tooltip').tooltipster('Oh, here's another toolip', '...and ...another ...tooltip')
+
+
+	}); */
+
+
+	&lt;/script&gt; 
+
+
+&lt;/head&gt;
+&lt;body&gt;
+
+	&lt;h1&gt;My Tooltipster Example&lt;/h1&gt;
+
+	&lt;section&gt;
+		&lt;article&gt;
+			&lt;!-- adding a tooltip to an image --&gt;
+			&lt;p&gt;add a tool tip to an image&lt;p&gt;
+			&lt;img src=&quot;images/bear.png&quot; id=&quot;bear&quot; class=&quot;tooltip&quot; title=&quot;Give me a class of 'tooltip'&quot; /&gt;
+		&lt;/article&gt;
+		&lt;article&gt;
+			&lt;!-- adding a tooltip to a link with class already assigned --&gt;
+			&lt;p&gt;link already has class&lt;p&gt;
+			&lt;a href=&quot;http://fullsail.edu&quot; class=&quot;link tooltip&quot; title=&quot;Add the word 'tooltip' to the end of the link's class&quot;&gt;This link already has a class...&lt;/a&gt;
+		&lt;/article&gt;
+		&lt;article&gt;
+			&lt;!-- adding a tooltip to a div --&gt;
+			&lt;p&gt;add tooltip to a div&lt;p&gt;
+			&lt;div id=&quot;divexample&quot; class=&quot;tooltip&quot; title=&quot;Give the div a class of tooltip&quot;&gt;This is a div and it needs a tooltip!&lt;/div&gt;
+		&lt;/article&gt;
+
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+					</div>
+				</section>
+ 				<section id="show-a-link" data-transition="slide-in fade-out">
+					<h1>My Example</h1>
+					<p><a href="index.html">Click here for my example of Tooltipster!</a><p>
+				</section>
+			</section>
+
+		</div> <!--closes slides class -->
+
+	</div> <!-- closes reveal div -->
+
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script>
+  		// Required, even if empty.
+  		Reveal.initialize({
+  		});
+ 	</script>
+
+</body>
+</html>

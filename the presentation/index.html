@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="tooltipster-master/css/tooltipster.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>
+    <script type="text/javascript" src="tooltipster-master/js/jquery.tooltipster.min.js"></script>
+
+    <!-- activates tooltipster  1 -->
+     <script>
+
+     /*   $(document).ready(function() {
+            $('.tooltip').tooltipster();
+
+       });
+
+      */
+    
+
+    // ----------------------------------------------------------------------
+
+    // add image and text to tooltip by using JQuery objects  2
+
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+                content: $('<span><img src="images/dog.png" /> <strong>OMG, I\'m a Tooltip</strong></span>'),
+                theme: "tooltipster-noir"
+            });
+        }); 
+	     
+
+    // ----------------------------------------------------------------------
+
+
+    // images with link and options 3
+
+    /*  $(document).ready(function() {
+            $('.tooltip').tooltipster({
+            content: $('<span><img src="images/dog.png" /><a href="pitbulls.org">Setup links in tooltips</a></span>'),
+            animation: 'grow',
+   			delay: 200,
+   			theme: 'tooltipster-shadow',
+   			touchDevices: false,
+   			autoClose: true,
+   			trigger: 'hover',
+   			interactive: true,
+   			speed: 1000,
+   			position: "bottom-right"
+
+            });
+
+
+        }); */
+
+	// ----------------------------------------------------------------------
+
+	//creating multiple tool tips on one item
+
+	/* $(document).ready(function() {
+
+		var tooltipsterObjects = $('.tooltip').tooltipster({
+			content: 'Oh, here\'s another toolip',
+			multiple: true,
+			position: 'top-left',
+			animation: "fall",
+			speed: 200,
+
+		});
+
+		var tooltip1 = tooltipsterObjects[0];
+			tooltip1.content('first tool tip').show();
+
+		var tooltipsterObjects = $('.tooltip').tooltipster({
+			// don't forget to provide content here as the 1st tooltip will have deleted the original title attribute of the element
+			content: '...and ...another ...tooltip',
+			multiple: true,
+			position: 'bottom-right',
+			animation: "fall",
+			speed: 2000,
+		});
+
+		// since the jQuery selector matches only one element, the array will contain only one Tooltipster object.
+		// Otherwise the array would contain one object for each matched element, in the same order as them
+		var tooltip2 = tooltipsterObjects[0];
+
+		// use this Tooltipster object to make any API method call on the tooltip
+		tooltip2.content('...and another').show();
+		// all documented methods can be called that way
+		var element = tooltip2.elementTooltip();
+
+		// calling the API methods in the usual way only affects the first tooltip that was created on the element
+		$('.tooltip').tooltipster('content', myNewContent)
+
+
+	}); */
+
+
+	</script> 
+
+
+</head>
+<body>
+
+	<h1>My Tooltipster Example</h1>
+
+	<section>
+		<article>
+			<!-- adding a tooltip to an image -->
+			<p>add a tool tip to an image<p>
+			<img src="images/bear.png" id="bear" class="tooltip" title="Give me a class of 'tooltip'" />
+		</article>
+		<article>
+			<!-- adding a tooltip to a link with class already assigned -->
+			<p>link already has class<p>
+			<a href="http://fullsail.edu" class="link tooltip" title="Add the word 'tooltip' to the end of the link's class">This link already has a class...</a>
+		</article>
+		<article>
+			<!-- adding a tooltip to a div -->
+			<p>add tooltip to a div<p>
+			<div id="divexample" class="tooltip" title="Give the div a class of tooltip">This is a div and it needs a tooltip!</div>
+		</article>
+
+
+
+</body>
+</html>

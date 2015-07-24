@@ -1,0 +1,68 @@
+/* STYLE.CSS */
+
+body {
+	background: #add9e4;
+  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
+  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background-color: #f7fbfc; 
+	color: #2E5A64;
+	font-size: 18pt;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+h1 {
+	color: #333;
+  	font-family: 'Quicksand', sans-serif;
+}
+img {
+	height: 40px;
+	width: 40px;
+	margin-right: 10px;
+}
+section {
+	margin: 100px;
+}
+article {
+	background: #6BCFE8;
+	width: 300px;
+	height: 275px;
+	padding: 25px;
+	clear: none;
+	float: left;
+	border: 1px solid #4C54B2;
+}
+article:nth-child(even){
+	background: #86A8B1;
+	border-left: 0;
+	border-right: 0;
+}
+a {
+	color: #fff;
+	font-size: 10pt;
+}
+/* tool tips */
+div {
+	background-color: #4C6064;
+	padding: 15px 5px 5px 15px;
+	border-radius: 10px;
+}
+#bear,
+#pup3 {
+	height: 200px;
+	width: 200px;
+}
+#divexample  {
+	color: #fff;
+	font-size: 10pt;
+	background-color: #2E5A64;
+	padding: 20px;
+}
+strong {
+	font-size: 30pt;
+	text-align: center;
+	color: #FFF0B8;
+}
